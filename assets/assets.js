@@ -12,6 +12,7 @@ import git from './git.png';
 import mongodb from './mongodb.png';
 import right_arrow_white from './right-arrow-white.png';
 import logo from './logo.png';
+import logoakhil from './logoakhil.png';
 import logo_dark from './logo_dark.png';
 import mail_icon from './mail_icon.png';
 import mail_icon_dark from './mail_icon_dark.png';
@@ -36,6 +37,7 @@ import send_icon from './send-icon.png';
 import right_arrow_bold from './right-arrow-bold.png';
 import right_arrow_bold_dark from './right-arrow-bold-dark.png';
 
+
 export const assets = {
     user_image,
     code_icon,
@@ -51,6 +53,7 @@ export const assets = {
     mongodb,
     right_arrow_white,
     logo,
+    logoakhil,
     logo_dark,
     mail_icon,
     mail_icon_dark,
@@ -77,27 +80,32 @@ export const assets = {
 };
 
 export const workData = [
-    {
-        title: 'Frontend project',
-        description: 'Web Design',
-        bgImage: '/work-1.png',
-    },
-    {
-        title: 'Geo based app',
-        description: 'Mobile App',
-        bgImage: '/work-2.png',
-    },
-    {
-        title: 'Photography site',
-        description: 'Web Design',
-        bgImage: '/work-3.png',
-    },
-    {
-        title: 'UI/UX designing',
-        description: 'UI/UX Design',
-        bgImage: '/work-4.png',
-    },
-]
+  {
+    title: 'Blogging Website',
+    description: 'Web Design',
+    bgImage: '/blogging.png',
+    link: "https://quick-blog-19tv-git-main-akhilesh029s-projects.vercel.app/"
+  },
+  {
+    title: 'Tic Tac Toe',
+    description: 'Mobile App',
+    bgImage: '/tictactoe.png',
+    link: "https://akhilesh029.github.io/Tic-tac-toe/"
+  },
+  {
+    title: 'Photography site',
+    description: 'Web Design',
+    bgImage: '/work-3.png',
+    link: "https://yourphotographysite.com"
+  },
+  {
+    title: 'UI/UX designing',
+    description: 'UI/UX Design',
+    bgImage: '/work-4.png',
+    link: "https://youruidesign.com"
+  }
+];
+
 
 export const serviceData = [
     { icon: assets.web_icon, title: 'Web design', description: 'Web development is the process of building, programming...', link: '' },

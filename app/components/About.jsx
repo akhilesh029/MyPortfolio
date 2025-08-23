@@ -5,105 +5,99 @@ import { motion } from "motion/react";
 
 const About = ({ isDarkMode }) => {
   return (
-    <motion.div
+    <section
       id="about"
-      className="w-full px-[12%] py-10 scroll-mt-20"
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 1 }}
+      className={`w-full px-[12%] py-16 scroll-mt-20 transition-colors duration-500 
+      ${
+        isDarkMode
+          ? "bg-gradient-to-b from-gray-900 via-gray-950 to-black"
+          : "bg-gradient-to-b from-orange-50 via-pink-50 to-white"
+      }`}
     >
-      <motion.h4
-        initial={{ opacity: 0, y: -20 }}
-        whileInView={{ opacity: 1 , y: 0}}
-        transition={{ duration: 0.5, delay: 0.3 }}
-        className="text-center mb-2 text-lg font-Ovo"
-      >
-        Introduction
-      </motion.h4>
-      <motion.h2 
-        initial={{ opacity: 0, y: -20 }}
-        whileInView={{ opacity: 1 , y: 0}}
-        transition={{ duration: 0.5, delay: 0.5 }}
-      className="text-center text-5xl font-Ovo">About me</motion.h2>
+      {/* Header */}
+      <div className="text-center mb-16">
+        <h4 className="uppercase text-sm tracking-[6px] text-gray-500 dark:text-gray-400">
+          Introduction
+        </h4>
+        <h2 className="text-5xl sm:text-6xl font-extrabold font-Ovo text-gray-900 dark:text-white mt-3">
+          About Me
+        </h2>
+      </div>
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1}}
-        transition={{ duration: 0.8}}
-      className="flex w-full flex-col lg:flex-row items-center gap-20 my-20">
-        <motion.div 
-          initial={{ opacity: 0,scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1}}
-          transition={{ duration: 0.6 }}
-        className="w-64 sm:w-80 rounded-3xl max-w-none">
-          <Image
-            src={assets.user_image}
-            alt="user"
-            className="w-full rounded-3xl "
-          />
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6 }}
-        className="flex-1">
-          <p className="mb-10 max-w-2xl font-Ovo">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
-            explicabo deleniti enim, praesentium natus consequatur, qui nemo
-          
+      {/* Content */}
+      <div className="flex w-full flex-col lg:flex-row items-center gap-20">
+        {/* Image Side */}
+        <div className="relative group">
+          <div className="w-72 sm:w-80 aspect-square rounded-3xl bg-gradient-to-tr from-pink-500 via-orange-400 to-yellow-400 p-[4px] shadow-2xl">
+            <div className="w-full h-full rounded-3xl bg-white dark:bg-gray-900 overflow-hidden">
+              <Image
+                src={assets.user_image}
+                alt="user"
+                className="w-full h-full object-cover rounded-3xl group-hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+          </div>
+          {/* Glow */}
+          <div className="absolute -inset-5 bg-gradient-to-r from-pink-400/30 to-yellow-400/30 blur-3xl rounded-full -z-10 opacity-70"></div>
+        </div>
+
+        {/* Info Side */}
+        <div className="flex-1">
+          <p className="mb-12 max-w-2xl text-lg leading-relaxed tracking-wide text-gray-700 dark:text-gray-300">
+            Passionate developer with experience in building modern web &
+            mobile applications. I love designing user-friendly products,
+            writing clean code, and constantly learning new technologies to
+            create impactful solutions.
           </p>
 
-          <motion.ul 
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 1 }}
-          className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl">
+          {/* Info Cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl">
             {infoList.map(({ icon, iconDark, title, description }, index) => (
-              <motion.li
-              whileHover={{scale: 1.05}}
-                className="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50 "
+              <div
                 key={index}
+                className="p-6 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-md transition-all duration-300 
+                bg-white/70 dark:bg-gray-800/70 backdrop-blur-lg 
+                hover:-translate-y-2 hover:shadow-xl
+                hover:bg-gradient-to-r hover:from-pink-50 hover:to-orange-50
+                dark:hover:from-purple-900/40 dark:hover:to-pink-900/40"
               >
                 <Image
                   src={isDarkMode ? iconDark : icon}
                   alt={title}
-                  className="w-7 mt-3"
+                  className="w-8 h-8 mb-4"
                 />
-                <h3 className=" my-4 font-semibold text-gray-700 dark:text-white">
-                  {" "}
+                <h3 className="font-semibold text-lg text-gray-900 dark:text-white">
                   {title}
                 </h3>
-                <p className=" text-gray-600 text-sm dark:text-white/80">
+                <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
                   {description}
                 </p>
-              </motion.li>
+              </div>
             ))}
-          </motion.ul>
-          <motion.h4
-           initial={{y: 20, opacity: 0 }}
-           whileInView={{y: 0, opacity: 1 }}
-           transition={{delay: 1.3, duration: 0.5 }}
-          className="my-6 text-gray-700 font-Ovo dark:text-white/80">
-            Tools I use
-          </motion.h4>
-          <motion.ul
-           initial={{ opacity: 0 }}
-           whileInView={{ opacity: 1 }}
-           transition={{delay: 1.5, duration: 0.6 }}
-          className="flex items-center gap-3 sm:gap-5">
+          </div>
+
+          {/* Tools */}
+          <h4 className="mt-12 mb-6 text-xl font-semibold text-gray-900 dark:text-white">
+            Tools I Use
+          </h4>
+          <div className="flex flex-wrap items-center gap-5">
             {toolsData.map((tool, index) => (
-              <motion.li
-              whileHover={{scale: 1.1}}
-                className="flex items-center justify-center w-12 sm:w-14 aspect-square border rounded-full cursor-pointer hover:-translate-y-1 duration-500 "
+              <div
                 key={index}
+                className="flex items-center justify-center w-14 h-14 rounded-full 
+                bg-white dark:bg-gray-800 shadow-md border border-gray-200 dark:border-gray-700 
+                cursor-pointer transition-all duration-300
+                hover:scale-110 hover:rotate-6 
+                hover:shadow-lg hover:bg-gradient-to-br hover:from-orange-100 hover:to-pink-100
+                dark:hover:from-purple-900/50 dark:hover:to-pink-900/50"
               >
-                <Image src={tool} alt="Tool" className="w-5 sm:w-7" />
-              </motion.li>
+                <Image src={tool} alt="Tool" className="w-7 h-7" />
+              </div>
             ))}
-          </motion.ul>
-        </motion.div>
-      </motion.div>
-    </motion.div>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 
