@@ -16,6 +16,7 @@ import logoakhil from './logoakhil.png';
 import logo_dark from './logo_dark.png';
 import mail_icon from './mail_icon.png';
 import mail_icon_dark from './mail_icon_dark.png';
+import akhilprofile from './akhilprofile.png';
 import profile_img from './profile-img.png';
 import download_icon from './download-icon.png';
 import hand_icon from './hand-icon.png';
@@ -39,6 +40,7 @@ import right_arrow_bold_dark from './right-arrow-bold-dark.png';
 
 
 export const assets = {
+    akhilprofile,
     user_image,
     code_icon,
     code_icon_dark,
@@ -84,8 +86,7 @@ export const workData = [
     title: 'Blogging Website',
     description: 'Web Design',
     bgImage: '/blogging.png',
-    // link: "https://quick-blog-19tv-git-main-akhilesh029s-projects.vercel.app/"
-      link: "https://quick-blog-19tv.vercel.app/"
+    link: "https://quick-blog-19tv.vercel.app/"
   },
   {
     title: 'Tic Tac Toe',

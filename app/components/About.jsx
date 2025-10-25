@@ -31,7 +31,7 @@ const About = ({ isDarkMode }) => {
           <div className="w-72 sm:w-80 aspect-square rounded-3xl bg-gradient-to-tr from-pink-500 via-orange-400 to-yellow-400 p-[4px] shadow-2xl">
             <div className="w-full h-full rounded-3xl bg-white dark:bg-gray-900 overflow-hidden">
               <Image
-                src={assets.user_image}
+                src={assets.akhilprofile}
                 alt="user"
                 className="w-full h-full object-cover rounded-3xl group-hover:scale-105 transition-transform duration-500"
               />
@@ -43,12 +43,14 @@ const About = ({ isDarkMode }) => {
 
         {/* Info Side */}
         <div className="flex-1">
-          <p className="mb-12 max-w-2xl text-lg leading-relaxed tracking-wide text-gray-700 dark:text-gray-300">
-            Passionate developer with experience in building modern web &
-            mobile applications. I love designing user-friendly products,
-            writing clean code, and constantly learning new technologies to
-            create impactful solutions.
-          </p>
+         <p className="mb-12 max-w-2xl text-lg leading-relaxed tracking-wide text-gray-700 dark:text-gray-300">
+  Full-stack MERN developer passionate about building scalable web and mobile applications. 
+  Skilled in React, Node.js, Express, and MongoDB, with a strong focus on clean architecture, 
+  responsive UI design, and performance optimization. I enjoy turning ideas into interactive 
+  digital experiences and constantly exploring new technologies to deliver efficient and 
+  impactful solutions.
+</p>
+
 
           {/* Info Cards */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl">

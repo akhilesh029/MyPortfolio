@@ -24,7 +24,8 @@ const Header = () => {
         className="relative p-1 rounded-full bg-white/30 backdrop-blur-lg shadow-xl shadow-purple-500/30 dark:bg-white/10"
       >
         <Image
-          src={assets.profile_img}
+          // src={assets.profile_img}
+          src={assets.akhilprofile}
           alt="Profile picture"
           className="rounded-full w-36 border-4 border-white/30 shadow-lg"
         />
