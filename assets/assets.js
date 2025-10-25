@@ -84,7 +84,8 @@ export const workData = [
     title: 'Blogging Website',
     description: 'Web Design',
     bgImage: '/blogging.png',
-    link: "https://quick-blog-19tv-git-main-akhilesh029s-projects.vercel.app/"
+    // link: "https://quick-blog-19tv-git-main-akhilesh029s-projects.vercel.app/"
+      link: "https://quick-blog-19tv.vercel.app/"
   },
   {
     title: 'Tic Tac Toe',
@@ -116,7 +117,7 @@ export const serviceData = [
 
 export const infoList = [
     { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Languages', description: 'HTML, CSS, JavaScript React Js, Next Js' },
-    { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Education', description: 'B.Tech in Computer Science' },
+    { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Education', description: 'B.Tech in Information Technology' },
     { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Projects', description: 'Built more than 5 projects' }
 ];
 
