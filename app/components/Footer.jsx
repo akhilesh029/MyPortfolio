@@ -29,7 +29,7 @@ const Footer = ({ isDarkMode }) => {
         <ul className="flex items-center gap-8 justify-center mt-4 sm:mt-0 text-gray-600 dark:text-gray-300">
           <li>
             <a
-              href="https://github.com/"
+              href="https://github.com/akhilesh029"
               target="_blank"
               className="hover:text-black dark:hover:text-white transition-colors font-medium"
             >
@@ -38,7 +38,7 @@ const Footer = ({ isDarkMode }) => {
           </li>
           <li>
             <a
-              href="https://linkedin.com/"
+              href="https://www.linkedin.com/in/akhilesh-akhil-7947a0261/"
               target="_blank"
               className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium"
             >
